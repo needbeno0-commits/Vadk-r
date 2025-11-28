@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mezőgazdasági drónszolgáltatások — Vadkár & Földkimérés</title>
+  <meta name="description" content="Mezőgazdasági drónszolgáltatások: vadkárfelmérés, földkimérés, ortofotó és hatósági dokumentáció. Gyors, precíz, jogszerű." />
+  <meta name="keywords" content="vadkárfelmérés, földkimérés, drón, ortofotó, tábla-dokumentálás, mezőgazdaság" />
+  <meta property="og:title" content="Mezőgazdasági drónszolgáltatások — Vadkár & Földkimérés" />
+  <meta property="og:description" content="Pontosság és gyorsaság: vadkárfelmérés, területmérés, ortofotó és hatósági dokumentáció drónnal." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="hu_HU" />
+  <style>
+    :root{
+      --bg:#ffffff; --text:#0b1320; --muted:#52606a; --accent:#0b7fff; --surface:#fbfdff;
+      --radius:8px; --maxw:980px; --gap:18px; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased;
+      padding:28px 16px; display:flex; justify-content:center; line-height:1.45;
+    }
+    .wrap{max-width:var(--maxw); width:100%;}
+    header{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:26px}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{width:46px;height:46px;border-radius:8px;background:#eef6ff;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    h1{margin:0;font-size:24px;font-weight:700}
+    .subtitle{color:var(--muted);font-size:14px;margin-top:6px}
+    nav a{color:var(--muted); text-decoration:none; margin-left:12px; font-weight:600; font-size:14px}
+    .cta{background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; text-decoration:none; margin-left:12px}
+    main{display:grid; gap:20px}
+    .card{background:var(--surface); border-radius:var(--radius); padding:18px; box-shadow:0 6px 20px rgba(16,24,40,0.04); border:1px solid rgba(11,19,32,0.03)}
+    .hero{display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+    .hero-left{flex:1; min-width:250px}
+    .hero-right{width:320px; min-width:220px}
+    .hero img{width:100%; border-radius:8px; display:block; object-fit:cover; height:200px}
+    .services{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+    .service{padding:12px;border-radius:8px;background:linear-gradient(180deg, #ffffff, #fbfdff);border:1px solid rgba(11,19,32,0.03)}
+    .service h4{margin:0 0 6px;font-size:16px}
+    .muted{color:var(--muted);font-size:14px}
+    .portfolio{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+    .portfolio img{width:100%;height:120px;object-fit:cover;border-radius:6px}
+    .two-cols{display:grid; grid-template-columns:1fr 360px; gap:16px}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e8eef4;background:#fff;color:var(--text);font-size:14px}
+    textarea{min-height:110px;resize:vertical}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600;border:0}
+    footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;margin-top:8px}
+    .kicker{font-size:13px;color:var(--muted);margin-bottom:6px}
+    @media (max-width:980px){
+      .portfolio{grid-template-columns:repeat(2,1fr)}
+      .two-cols{grid-template-columns:1fr}
+      .hero-right{width:100%}
+    }
+    @media (max-width:560px){
+      .portfolio{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+    }
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .tag{background:#f1f8ff;padding:6px 8px;border-radius:999px;color:var(--accent);font-weight:600;font-size:13px}
+    #lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);align-items:center;justify-content:center;z-index:9999}
+    #lightbox img{max-width:94%;max-height:86%;border-radius:6px}
+    #lbClose{position:absolute;top:16px;right:16px;background:transparent;border:0;color:#fff;font-size:22px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">DR</div>
+        <div>
+          <div style="font-weight:700">Drón Mezőgazda (még nincs cégneved)</div>
+          <div class="subtitle">Vadkár • Földkimérés • Ortofotó</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#services">Szolgáltatások</a>
+        <a href="#portfolio">Portfólió</a>
+        <a href="#contact" class="cta">Árajánlat</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="card hero" aria-labelledby="hero-title">
+        <div class="hero-left">
+          <h1 id="hero-title">Precíz mezőgazdasági drónszolgáltatások — gyorsan, jogszerűen</h1>
+          <p class="muted">Vadkárfelmérés, földkimérés, ortofotó és hatósági dokumentáció. Dokumentáció, amellyel hatósági és biztosítási ügyeket is kiszolgálsz.</p>
+          <div class="tags" aria-hidden="true">
+            <div class="tag">Engedélyezett</div>
+            <div class="tag">Biztosítás</div>
+            <div class="tag">Pontosság</div>
+          </div>
+          <div style="margin-top:14px">
+            <a class="btn" href="#contact">Árajánlat kérése</a>
+            <a class="btn" href="#services" style="background:#f5f8ff;color:var(--accent);margin-left:8px;border:1px solid rgba(11,19,32,0.03)">Szolgáltatások</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <img src="data:image/svg+xml;utf8,
+            <svg xmlns='http://www.w3.org/2000/svg' width='800' height='500' viewBox='0 0 800 500'>
+              <rect width='100%' height='100%' fill='%23eaf6ff'/>
+              <g fill='%230b7fff' opacity='0.9'>
+                <circle cx='120' cy='140' r='8'/>
+                <circle cx='240' cy='90' r='6'/>
+                <rect x='60' y='320' width='620' height='60' rx='6' fill='%23d3f0ff'/>
+              </g>
+              <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='26' fill='%23203a59'>Drón a tarlón — példa</text>
+            </svg>" alt="Drón a tarlón — mezőgazdasági felmérés">
+          <p class="muted" style="margin-top:8px;font-size:13px">Példa felvétel — cseréld saját képeidre (ha szeretnéd később segítek a feltöltésben).</p>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="card" aria-labelledby="services-title">
+        <h2 id="services-title" style="margin:0 0 10px">Szolgáltatások (megelőző, dokumentáló és hatósági célokra)</h2>
+        <p class="muted kicker">Az alábbi szolgáltatásokat nyújtom — mind jogilag és biztosításilag rendezett keretek között.</p>
+
+        <div class="services" role="list">
+          <div class="service" role="listitem">
+            <h4>Vadkárfelmérés drónnal</h4>
+            <p class="muted">Gyors légi felmérés, pontos fotódokumentáció és koordináták. Készítünk részletes anyagot biztosítók és hatóságok részére (geotag, metaadatok).</p>
+          </div>
+
+          <div class="service" role="listitem">
+            <h4>Földkimérés / területmérés</h4>
+            <p class="muted">Pontosságra optimalizált repülési tervek, ortofotó alapú területmérés és területszámítás (hektárpontosságig). KML / GeoJSON export kérésre.</p>
+          </div>
+
+          <div class="service" role="listitem">
+            <h4>Ortofotó készítés</h4>
+            <p class="muted">Magas felbontású ortofotó készítése, amely alkalmas mezőgazdasági dokumentációhoz és GIS-rendszerekhez.</p>
+          </div>
+
+          <div class="service" role="listitem">
+            <h4>Tábla-állapot dokumentálás</h4>
+            <p class="muted">Rendszeres felvételek (időszakos monitoring), állomány- és betakarítás előtti ellenőrzések fotódokumentációval.</p>
+          </div>
+
+          <div class="service" role="listitem">
+            <h4>Hatósági és biztosítói dokumentáció</h4>
+            <p class="muted">Formátumok és metaadatok hatósági elvárások szerint; teljes körű dokumentáció vadkárigényekhez és támogatásokhoz.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="card" aria-labelledby="portfolio-title">
+        <h2 id="portfolio-title" style="margin:0 0 10px">Portfólió — minták</h2>
+        <p class="muted">Néhány példa korábbi felvételekből. Cseréld a képeket a saját munkáidra.</p>
+
+        <div class="portfolio" id="gallery">
+          <img src="data:image/svg+xml;utf8,
+            <svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'>
+              <rect width='100%' height='100%' fill='%23f3fbff'/>
+              <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%230b7fff'>Vadkárfelvétel</text>
+            </svg>" alt="Vadkárfelmérés - példa 1" loading="lazy">
+          <img src="data:image/svg+xml;utf8,
+            <svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'>
+              <rect width='100%' height='100%' fill='%23f7fff2'/>
+              <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%230b7fff'>Földkimérés</text>
+            </svg>" alt="Földkimérés - példa 2" loading="lazy">
+          <img src="data:image/svg+xml;utf8,
+            <svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'>
+              <rect width='100%' height='100%' fill='%23fff8f1'/>
+              <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%230b7fff'>Ortofotó</text>
+            </svg>" alt="Ortofotó - példa 3" loading="lazy">
+        </div>
+      </section>
+
+      <!-- About + Contact -->
+      <section class="two-cols">
+        <article class="card">
+          <h3 style="margin-top:0">Rövid bemutatkozás</h3>
+          <p class="muted">Tapasztalt drónpilóta vagyok, aki mezőgazdasági felmérésekre specializálódott. Az adatok pontossága és a jogszerűség számomra elsődleges: repülési terv, engedélyek és felelősségbiztosítás rendelkezésre állnak.</p>
+
+          <h4 style="margin-top:12px">Miért válassz engem?</h4>
+          <ul class="muted">
+            <li>Precíz, GPS-támogatott mérések</li>
+            <li>Hatósági és biztosítói igényeknek megfelelő dokumentáció</li>
+            <li>Gyors adatfeldolgozás és export (GeoTIFF, KML, CSV)</li>
+          </ul>
+
+          <h4 style="margin-top:12px">Gyakori kérdések</h4>
+          <p class="muted"><strong>Kell-e engedély?</strong> Gyakran igen. Segítek az engedélyezésben és a repülési terv elkészítésében. <br><strong>Mennyi idő egy felmérés?</strong> 30–180 perc, a terület nagyságától és a feladattól függően.</p>
+        </article>
+
+        <aside id="contact" class="card">
+          <h3 style="margin-top:0">Kapcsolat & Árajánlat</h3>
+          <p class="muted">Írd le röviden a projektet: helyszín, terület nagysága, milyen adatra van szükséged, és csatolj, ha van helyszínfotó.</p>
+
+          <!-- Form that uses mailto fallback - the user's email is included in header and will be used as recipient -->
+          <form id="contactForm">
+            <label for="name">Név</label>
+            <input id="name" name="name" type="text" placeholder="Pl. Kovács János" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="email@pelda.hu" required>
+
+            <label for="phone">Telefonszám</label>
+            <input id="phone" name="phone" type="tel" placeholder="+36 20 123 4567">
+
+            <label for="service">Kívánt szolgáltatás</label>
+            <select id="service" name="service" required>
+              <option value="">Válassz...</option>
+              <option>Vadkárfelmérés</option>
+              <option>Földkimérés / területmérés</option>
+              <option>Ortofotó</option>
+              <option>Tábla-dokumentálás</option>
+              <option>Hatósági dokumentáció</option>
+            </select>
+
+            <label for="message">Rövid projektleírás</label>
+            <textarea id="message" name="message" placeholder="Mikor, hol, terület nagysága, speciális igények..." required></textarea>
+
+            <label for="files" class="muted">Helyszín fotó vagy kiegészítő anyag (opcionális)</label>
+            <input id="files" name="files" type="file" accept="image/*,application/pdf">
+
+            <button type="submit" class="btn" style="width:100%;margin-top:10px">Küldés</button>
+
+            <p class="muted" style="margin-top:8px;font-size:13px">Vagy hívd: <strong>+36 20 123 4567</strong> • Email: <strong>kelle.bence@gmail.com</strong></p>
+          </form>
+        </aside>
+      </section>
+
+      <footer class="muted card" style="display:flex;align-items:center;justify-content:space-between">
+        <div>© <span id="year"></span> Drón Mezőgazda — Minden jog fenntartva</div>
+        <div style="font-size:13px">Engedélyek és biztosítás rendben</div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" aria-hidden="true">
+    <button id="lbClose" aria-label="Bezár">✕</button>
+    <img id="lbImg" src="" alt="Nagyított kép">
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Portfolio lightbox (delegated)
+    document.getElementById('gallery').addEventListener('click', function(e){
+      const img = e.target.closest('img');
+      if(!img) return;
+      document.getElementById('lbImg').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+      document.getElementById('lightbox').setAttribute('aria-hidden','false');
+    });
+    document.getElementById('lbClose').addEventListener('click', function(){
+      document.getElementById('lightbox').style.display = 'none';
+      document.getElementById('lightbox').setAttribute('aria-hidden','true');
+    });
+
+    // Contact form: mailto fallback so the user doesn't need backend.
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+      const service = encodeURIComponent(document.getElementById('service').value);
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      const subject = encodeURIComponent('Árajánlat kérése: ' + service);
+      let body = '';
+      body += 'Név: ' + decodeURIComponent(name) + '%0D%0A';
+      body += 'Email: ' + decodeURIComponent(email) + '%0D%0A';
+      body += 'Telefonszám: ' + decodeURIComponent(phone) + '%0D%0A';
+      body += 'Kívánt szolgáltatás: ' + decodeURIComponent(service) + '%0D%0A%0D%0A';
+      body += 'Projekt leírás:%0D%0A' + decodeURIComponent(message) + '%0D%0A%0D%0A';
+      body += '---%0D%0A';
+      body += 'Küldve a weboldal űrlapjából.';
+
+      // mailto link - opens user's email client. Attachments cannot be prefilled via mailto.
+      const mailto = 'mailto:kelle.bence@gmail.com' + '?subject=' + subject + '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailto;
+    });
+  </script>
+
+  <!-- JSON-LD strukturált adat -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Drón Mezőgazda (Később megadod a cégnév)",
+    "description": "Mezőgazdasági drónszolgáltatások: vadkárfelmérés, földkimérés, ortofotó és hatósági dokumentáció.",
+    "areaServed": "Magyarország",
+    "serviceType": [
+      "Vadkárfelmérés",
+      "Földkimérés",
+      "Ortofotó készítés",
+      "Tábla-dokumentálás",
+      "Hatósági dokumentáció"
+    ],
+    "telephone": "+36 20 123 4567",
+    "email": "kelle.bence@gmail.com"
+  }
+  </script>
+</body>
+</html>
